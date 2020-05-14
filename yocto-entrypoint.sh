@@ -45,7 +45,7 @@ yocto_sync()
       ;;
   esac
 
-  echo "N" | repo init -u https://github.com/FullMetalUpdate/manifest -b "${YOCTO}/${BRANCH_REPO}" -m "${FULLMETALUPDATE}.xml"
+  echo "N" | repo init -u https://github.com/cakebread/manifest -b "${YOCTO}/${BRANCH_REPO}" -m "${FULLMETALUPDATE}.xml"
 
   repo sync --force-sync
 }
