@@ -3,6 +3,7 @@
 SUPPORTED_MACHINES_ROCKO=" \
   imx6qdlsabresd \
   raspberrypi3 \
+  raspberrypi4-64 \
 "
 SUPPORTED_MACHINES_THUD=" \
   imx8mqevk \
@@ -35,6 +36,9 @@ yocto_sync()
       BRANCH_REPO="imx"
       ;;
   "raspberrypi3")
+      BRANCH_REPO="raspberrypi"
+      ;;
+  "raspberrypi4-64")
       BRANCH_REPO="raspberrypi"
       ;;
   "stm32mp1-disco")
