@@ -13,6 +13,10 @@ SUPPORTED_MACHINES_WARRIOR=" \
   imx8mqevk \
 "
 
+SUPPORTED_MACHINES_ZEUS=" \
+  raspberrypi4-64 \
+"
+
 SUPPORTED_FULLMETALUPATE=" \
   dev \
   latest-release \
@@ -86,6 +90,11 @@ is_yocto_supported()
   "warrior")
       if ! is_in_list "$MACHINE" "$SUPPORTED_MACHINES_WARRIOR"; then
         echo "$MACHINE is not supported by FullMetalUpdate for the Yocto version of Warrior: $SUPPORTED_MACHINES_WARRIOR"
+      fi
+      ;;
+  "zeus")
+      if ! is_in_list "$MACHINE" "$SUPPORTED_MACHINES_ZEUS"; then
+        echo "$MACHINE is not supported by FullMetalUpdate for the Yocto version of Zeus: $SUPPORTED_MACHINES_ZEUS"
       fi
       ;;
   *)
